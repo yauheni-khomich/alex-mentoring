@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Alex.Services.Employees.Contracts\Alex.Services.Employees.Contracts.csproj" />
+  </ItemGroup>
+
+</Project>
