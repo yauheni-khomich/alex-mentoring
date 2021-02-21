@@ -9,13 +9,9 @@ namespace Alex.WebApi.Employees.Models
     {
         public Guid Id { get; set; }
 
-        public string FirstName { get; set; }
-
-        public string LastName { get; set; }
+        public string DisplayName { get; set; } // should be FirstName and LastName separated by space.
 
         public DateTime BirthDate { get; set; }
-
-        public decimal Salary { get; set; }
 
         public AddressDto Address { get; set; }
     }

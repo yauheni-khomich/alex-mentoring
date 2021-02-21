@@ -7,5 +7,8 @@ namespace Alex.Services.Employees.Domain.Data
     public interface IEmployeeRepository
     {
         Task<Employee> GetByIdAsync(Guid id);
+
+        Task CreateAsync(Employee employee);
+
     }
 }

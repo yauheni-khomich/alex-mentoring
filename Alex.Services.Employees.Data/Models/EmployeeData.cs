@@ -15,5 +15,7 @@ namespace Alex.Services.Employees.Data.Models
         public decimal Salary { get; set; }
 
         public AddressData Address { get; set; }
+
+        public DateTime CreatedAt { get; set; }
     }
 }

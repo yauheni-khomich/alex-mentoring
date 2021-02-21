@@ -1,11 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
-namespace Alex.Services.Employees.Contracts.Models
+namespace Alex.WebApi.Employees.Models
 {
-    public class Employee
+    public class CreateEmployeeRequestDto
     {
-        public Guid Id { get; set; }
-
         public string FirstName { get; set; }
 
         public string LastName { get; set; }
@@ -14,8 +15,6 @@ namespace Alex.Services.Employees.Contracts.Models
 
         public decimal Salary { get; set; }
 
-        public Address Address { get; set; }
-
-        public DateTime CreatedAt { get; set; }
+        public AddressDto Address { get; set; }
     }
 }

@@ -11,6 +11,7 @@ using Alex.Services.Employees.Domain.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -32,6 +33,9 @@ namespace Alex.WebApi
 
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddControllers();
+            services.AddSwaggerGen();
+
             var sqlServerDbContextConfig = configuration.GetSection("SqlServerDbContextConfig")
                 .Get<SqlServerDbContextConfig>();
 

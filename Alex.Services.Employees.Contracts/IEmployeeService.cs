@@ -6,8 +6,8 @@ namespace Alex.Services.Employees.Contracts
 {
     public interface IEmployeeService
     {
-        object Add { get; }
-
         Task<Employee> GetByIdAsync(Guid id);
+
+        Task<Guid> CreateAsync(CreateEmployeeRequest createRequest);
     }
 }

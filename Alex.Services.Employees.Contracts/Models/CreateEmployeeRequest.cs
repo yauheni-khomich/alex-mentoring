@@ -2,10 +2,8 @@
 
 namespace Alex.Services.Employees.Contracts.Models
 {
-    public class Employee
+    public class CreateEmployeeRequest
     {
-        public Guid Id { get; set; }
-
         public string FirstName { get; set; }
 
         public string LastName { get; set; }
@@ -15,7 +13,5 @@ namespace Alex.Services.Employees.Contracts.Models
         public decimal Salary { get; set; }
 
         public Address Address { get; set; }
-
-        public DateTime CreatedAt { get; set; }
     }
 }

@@ -10,6 +10,11 @@ namespace Alex.Services.Employees.Data.Mappers.MapperProfiles
         {
             this.CreateMap<Employee, EmployeeData>()
                 .ReverseMap();
+
+            this.CreateMap<Address, AddressData>()
+                .ForMember(x => x.City, opt => opt.MapFrom(c => c.City))
+                .ReverseMap()
+                .ForMember(x => x.City, opt => opt.MapFrom(c => c.City));
         }
     }
 }
