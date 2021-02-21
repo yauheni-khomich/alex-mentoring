@@ -20,9 +20,21 @@ namespace Alex.WebApi.Employees.Controllers
         public async Task<IActionResult> GetEmployeeById([FromRoute] Guid id)
         {
             var employee = await employeeService.GetByIdAsync(id);
-
+            var employeeDto = employeeService.GetByIdAsync<EmployeeDto>().Select(o => new Employee()
+            {
+                Name = o.Name,
+                Surname = o.Surname,
+                BirthDate = o.BirthDate
+            });
             // TODO: here we should return EmployeeDto model instead of Employee model (which is Business layer model)
-            return Ok(employee);
+            return employeeDto;
         }
+
+        //[HttpGet]
+        //public void AddEmployee([FromQuery] Employ)
+        //{
+        //    employeeService.S
+
+        //}
     }
 }
